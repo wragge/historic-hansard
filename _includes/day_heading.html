@@ -1,0 +1,13 @@
+<div class="btn-group pull-right links-bar" role="group">
+    <a href='http://parlinfo.aph.gov.au/parlInfo/download/hansard80/hansardr80/{{ page.date | date: "%Y-%m-%d" }}/toc_pdf/{{ page.file_id }}.pdf' class="btn btn-primary btn-sm">View PDF <i class="fa fa-external-link" aria-hidden="true"></i></a>
+    <a href='https://github.com/wragge/hansard-xml/blob/master/houseofreps/{{ page.date | date: "%Y" }}/{{ page.file_id }}.xml' class="btn btn-primary btn-sm">View XML <i class="fa fa-external-link" aria-hidden="true"></i></a>
+</div>
+<h1><small>{{ page.house }}</small><br>{{ page.date | date: '%e %B %Y' }}</h1>
+<p class="lead">{{ page.parliament | ordinal: "super" }} Parliament &middot; {{ page.session | ordinal: "super" }} Session</p>
+<nav>
+  <ul class="pager">
+    <li class="previous{% unless page.previous %} disabled{% endunless %}"><a href="{% if page.previous %}{{ page.previous.url | prepend: site.baseurl }}{% endif %}"><span aria-hidden="true">&larr;</span> Previous day</a></li>
+    <li class="next{% unless page.next %} disabled{% endunless %}"><a href="{% if page.next %}{{ page.next.url | prepend: site.baseurl }}{% endif %}">Next day<span aria-hidden="true">&rarr;</span></a></li>
+  </ul>
+</nav>
+<hr>

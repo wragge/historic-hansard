@@ -1,0 +1,14 @@
+---
+house: House of Representatives
+title: House of Representatives, 1901 to 1965
+layout: default
+permalink: /hofreps/
+---
+
+<h1><small>House of Representatives</small><br>1901 to 1965</h1>
+
+{% assign years = site.hofreps | group_by:"year" %}
+{% for year in years %}
+    <h3>{{ year.name }} <a href="{{ site.baseurl }}/hofreps/{{ year.name }}/"> <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a></h3>
+    <p><span class="label label-default">{{ year.items |size }} sitting days</span></p>
+{% endfor %}
