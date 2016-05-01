@@ -6,6 +6,12 @@
       {% include navbar.html %}
       {% include day_heading.html %}
       {{ content }}
+      <p>
+      <div class="btn-group links-bar visible-xs" role="group">
+        <a href='http://parlinfo.aph.gov.au/parlInfo/download/hansard80/hansardr80/{{ page.date | date: "%Y-%m-%d" }}/toc_pdf/{{ page.file_id }}.pdf' class="btn btn-primary btn-sm">View PDF <i class="fa fa-external-link" aria-hidden="true"></i></a>
+        <a href='https://github.com/wragge/hansard-xml/blob/master/houseofreps/{{ page.date | date: "%Y" }}/{{ page.file_id }}.xml' class="btn btn-primary btn-sm">View XML <i class="fa fa-external-link" aria-hidden="true"></i></a>
+      </div>
+      </p>
       {% include footer.html %}
     </div>  
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
